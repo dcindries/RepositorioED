@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escalera Diagonal en Canvas</title>
+<style>
+  canvas {
+    border: 1px solid #000;
+  }
+</style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+  // Obtener el contexto del canvas
+  var canvas = document.getElementById('myCanvas');
+  var ctx = canvas.getContext('2d');
+
+  // Configuración de la escalera
+  var startX = 100; // Coordenada x inicial
+  var startY = 450; // Coordenada y inicial
+  var stepWidth = 25; // Ancho de cada escalón
+  var stepHeight = 20; // Altura de cada escalón
+  var totalSteps = 10; // Número total de escalones
+
+  // Dibujar la escalera
+  for (var i = 0; i < totalSteps; i++) {
+    // Dibujar cada escalón como un rectángulo
+    ctx.fillRect(startX + i * stepWidth, startY - i * stepHeight, stepWidth, stepHeight);
+  }
+</script>
+</body>
+</html>
