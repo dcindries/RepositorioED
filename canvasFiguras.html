@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Figuras en Canvas</title>
+<style>
+  canvas {
+    border: 1px solid #000;
+ border: solid bisque;
+ }
+</style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+  // Obtener el contexto del canvas
+  var canvas = document.getElementById('myCanvas');
+  var ctx = canvas.getContext('2d');
+
+  // Dibujar un rectángulo
+  ctx.fillStyle = 'blue';
+  ctx.fillRect(50, 50, 100, 50);
+
+  // Dibujar un círculo
+  ctx.beginPath();
+  ctx.arc(250, 75, 50, 0, Math.PI * 2);
+  ctx.fillStyle = 'red';
+  ctx.fill();
+
+  // Dibujar un triángulo
+  ctx.beginPath();
+  ctx.moveTo(400, 50);
+  ctx.lineTo(350, 100);
+  ctx.lineTo(450, 100);
+  ctx.closePath();
+  ctx.fillStyle = 'green';
+  ctx.fill();
+
+  // Dibujar una línea
+  ctx.beginPath();
+  ctx.moveTo(50, 200);
+  ctx.lineTo(150, 200);
+  ctx.strokeStyle = 'black';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  // Dibujar un arco
+  ctx.beginPath();
+  ctx.arc(300, 250, 50, 0, Math.PI);
+  ctx.strokeStyle = 'purple';
+  ctx.lineWidth = 3;
+  ctx.stroke();
+  ctx.fill();
+
+  // Dibujar un pentágono
+  ctx.beginPath();
+  ctx.moveTo(400, 200);
+  ctx.lineTo(450, 250);
+  ctx.lineTo(425, 325);
+  ctx.lineTo(375, 325);
+  ctx.lineTo(350, 250);
+  ctx.closePath();
+  ctx.fillStyle = 'orange';
+  ctx.fill();
+</script>
+</body>
+</html>

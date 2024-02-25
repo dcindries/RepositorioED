@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Figuras en Canvas</title>
+<style>
+  canvas {
+    border: 1px solid #000;
+    background-color: antiquewhite;
+  }
+</style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+  // Obtener el contexto del canvas
+  var canvas = document.getElementById('myCanvas');
+  var ctx = canvas.getContext('2d');
+
+  // Dibujar un rombo
+  ctx.beginPath();
+  ctx.moveTo(150, 400);
+  ctx.lineTo(200, 350);
+  ctx.lineTo(250, 400);
+  ctx.lineTo(200, 450);
+  ctx.closePath();
+  ctx.fillStyle = 'yellow';
+  ctx.fill();
+
+  // Dibujar un óvalo
+  ctx.beginPath();
+  ctx.ellipse(350, 100, 80, 50, 0, 0, Math.PI * 2);
+  ctx.fillStyle = 'cyan';
+  ctx.fill();
+
+  // Dibujar un trapecio
+  ctx.beginPath();
+  ctx.moveTo(300, 350);
+  ctx.lineTo(350, 300);
+  ctx.lineTo(450, 300);
+  ctx.lineTo(500, 350);
+  ctx.closePath();
+  ctx.fillStyle = 'magenta';
+  ctx.fill();
+
+  // Dibujar un hexágono
+  ctx.beginPath();
+  ctx.moveTo(150, 100);
+  ctx.lineTo(200, 50);
+  ctx.lineTo(300, 50);
+  ctx.lineTo(350, 100);
+  ctx.lineTo(300, 150);
+  ctx.lineTo(200, 150);
+  ctx.closePath();
+  ctx.fillStyle = 'lime';
+  ctx.fill();
+
+  // Dibujar un octágono
+  ctx.beginPath();
+  ctx.moveTo(50, 250);
+  ctx.lineTo(80, 220);
+  ctx.lineTo(120, 220);
+  ctx.lineTo(150, 250);
+  ctx.lineTo(150, 290);
+  ctx.lineTo(120, 320);
+  ctx.lineTo(80, 320);
+  ctx.lineTo(50, 290);
+  ctx.closePath();
+  ctx.fillStyle = 'orange';
+  ctx.fill();
+</script>
+</body>
+</html>
